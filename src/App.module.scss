@@ -34,35 +34,7 @@
       }
    }
 }
-.header {
-   max-width: 1140px;
-   padding: 0 20px;
-   margin: 0 auto;
-   height: 128px;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   margin-bottom: 180px;
-}
-.headerMenu {
-}
-.headerMenuList {
-   display: flex;
-}
-.headerMenuItem {
-   color: #fff;
-   font-size: 13px;
-   font-weight: 500;
-   &:not(:first-child) {
-      margin-left: 32px;
-   }
-   &:hover {
-      cursor: pointer;
-      text-decoration: underline;
-   }
-}
-.headerMenulink {
-}
+
 // ======== MAIN==========
 .main {
    max-width: 770px;

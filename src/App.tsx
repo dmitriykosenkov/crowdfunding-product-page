@@ -1,16 +1,16 @@
 import React from "react";
 import bookmarkIcon from "./images/icon-bookmark.svg";
 import mainHeaderIcon from "./images/logo-mastercraft.svg";
-import headerLogo from "./images/logo.svg";
-import s from "./App.module.scss";
 import { motion } from "framer-motion";
+import Header from "./components/Header/Header";
+import s from "./App.module.scss";
 
 function App() {
    return (
       <div className={s.app}>
          <div className={s.mainImage}></div>
          <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
+            initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
               duration: 0.7,
@@ -19,30 +19,8 @@ function App() {
             }}
             className={s.container}
          >
-            <header className={s.header}>
-               <a href="" className={s.headerLogo}>
-                  <img src={headerLogo} alt="" />
-               </a>
-               <nav className={s.headerMenu}>
-                  <ul className={s.headerMenuList}>
-                     <li className={s.headerMenuItem}>
-                        <a href="" className={s.headerMenuLink}>
-                           About
-                        </a>
-                     </li>
-                     <li className={s.headerMenuItem}>
-                        <a href="" className={s.headerMenuLink}>
-                           Discover
-                        </a>
-                     </li>
-                     <li className={s.headerMenuItem}>
-                        <a href="" className={s.headerMenuLink}>
-                           Get Started
-                        </a>
-                     </li>
-                  </ul>
-               </nav>
-            </header>
+            <Header />
+          
             <main className={s.main}>
                <section className={s.mainHeader}>
                   <div className={s.mainHeaderIcon}>
