@@ -3,12 +3,22 @@ import bookmarkIcon from "./images/icon-bookmark.svg";
 import mainHeaderIcon from "./images/logo-mastercraft.svg";
 import headerLogo from "./images/logo.svg";
 import s from "./App.module.scss";
+import { motion } from "framer-motion";
 
 function App() {
    return (
       <div className={s.app}>
          <div className={s.mainImage}></div>
-         <div className={s.container}>
+         <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.7,
+              delay: 0.1,
+              ease: [0, 0.71, 0.2, 1.01]
+            }}
+            className={s.container}
+         >
             <header className={s.header}>
                <a href="" className={s.headerLogo}>
                   <img src={headerLogo} alt="" />
@@ -120,13 +130,17 @@ function App() {
                   </div>
                   <div className={s.aboutCard}>
                      <div className={s.aboutCardHeader}>
-                        <h5 className={s.aboutCardHeaderTitle}>Black Edition Stand</h5>
+                        <h5 className={s.aboutCardHeaderTitle}>
+                           Black Edition Stand
+                        </h5>
                         <h6 className={s.aboutCardHeaderSubtitle}>
                            Pledge $75 or more
                         </h6>
                      </div>
                      <div className={s.aboutCardText}>
-                     You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer member list. Shipping is included.
+                        You get a Black Special Edition computer stand and a
+                        personal thank you. You’ll be added to our Backer member
+                        list. Shipping is included.
                      </div>
                      <div className={s.aboutCardFooter}>
                         <div className={s.aboutCardFooterCounter}>
@@ -141,13 +155,17 @@ function App() {
                   </div>
                   <div className={s.aboutCard}>
                      <div className={s.aboutCardHeader}>
-                        <h5 className={s.aboutCardHeaderTitle}>Mahogany Special Edition</h5>
+                        <h5 className={s.aboutCardHeaderTitle}>
+                           Mahogany Special Edition
+                        </h5>
                         <h6 className={s.aboutCardHeaderSubtitle}>
                            Pledge $200 or more
                         </h6>
                      </div>
                      <div className={s.aboutCardText}>
-                     You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to our Backer member list. Shipping is included. 
+                        You get two Special Edition Mahogany stands, a Backer
+                        T-Shirt, and a personal thank you. You’ll be added to
+                        our Backer member list. Shipping is included.
                      </div>
                      <div className={s.aboutCardFooter}>
                         <div className={s.aboutCardFooterCounter}>
@@ -162,7 +180,7 @@ function App() {
                   </div>
                </section>
             </main>
-         </div>
+         </motion.div>
       </div>
    );
 }
